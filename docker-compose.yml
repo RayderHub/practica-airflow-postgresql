@@ -1,0 +1,52 @@
+services:
+  postgres-db:
+    image: postgres:15
+    container_name: postgres_staging
+    environment:
+      POSTGRES_USER: uteq_user
+      POSTGRES_PASSWORD: uteq_password
+      POSTGRES_DB: dw_analytics
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - analytics_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U uteq_user -d dw_analytics"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  airflow:
+    image: apache/airflow:2.7.1-python3.10
+    container_name: airflow_local
+    command: standalone
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      _PIP_ADDITIONAL_REQUIREMENTS: "pandas sqlalchemy psycopg2-binary"
+      DB_USER: uteq_user
+      DB_PASSWORD: uteq_password
+      DB_HOST: postgres-db
+      DB_PORT: "5432"
+      DB_NAME: dw_analytics
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./scripts:/opt/airflow/scripts
+      - ./data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    networks:
+      - analytics_net
+
+networks:
+  analytics_net:
+    driver: bridge
+
+volumes:
+  pgdata:
