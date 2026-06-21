@@ -1,0 +1,403 @@
+ANALISIS COMPARATIVO DE IA, MACHINE LEARNING, DATA MINING Y BIG DATA
+CASOS DE ESTUDIO Y APLICACION A LA PRACTICA ETL
+
+Alumno: Rayder
+Repositorio de apoyo: https://github.com/RayderHub/practica-airflow-postgresql
+
+1. INTRODUCCION
+
+Este documento presenta un analisis comparativo entre inteligencia artificial, machine learning, data mining y big data. Tambien desarrolla dos casos de estudio: el primero para la empresa Electro-Hogar S.A., enfocada en retencion de clientes, y el segundo a partir de la practica ETL realizada con Docker, Apache Airflow, PostgreSQL y un dataset transaccional de e-commerce.
+
+La finalidad es relacionar conceptos teoricos con un escenario practico de analisis de datos, preparacion de informacion, diseno de un data warehouse y generacion de datos listos para una fase posterior de mineria de datos.
+
+2. ANALISIS COMPARATIVO
+
+2.1 Inteligencia Artificial
+
+Caracteristicas:
+- Busca construir sistemas capaces de simular capacidades humanas como razonamiento, percepcion, aprendizaje, toma de decisiones y comprension del lenguaje.
+- Puede usar reglas, modelos estadisticos, aprendizaje automatico, redes neuronales o combinaciones de tecnicas.
+- Es un campo amplio que incluye machine learning, procesamiento de lenguaje natural, vision por computadora, sistemas expertos y agentes inteligentes.
+
+Beneficios:
+- Automatiza tareas repetitivas o complejas.
+- Mejora la toma de decisiones con base en datos.
+- Permite personalizacion de servicios, deteccion de patrones y respuestas rapidas.
+- Puede reducir costos operativos cuando se implementa correctamente.
+
+Restricciones y retos:
+- Requiere datos suficientes y de buena calidad.
+- Puede presentar sesgos si los datos historicos estan sesgados.
+- Algunos modelos son dificiles de explicar.
+- Su implementacion requiere infraestructura, talento tecnico y gobierno de datos.
+
+Casos de aplicacion:
+- Chatbots de atencion al cliente.
+- Sistemas de recomendacion.
+- Diagnostico asistido en salud.
+- Deteccion automatica de fraudes.
+- Optimizacion de rutas logisticas.
+
+Lenguajes y herramientas:
+- Python, R, Java, Julia.
+- TensorFlow, PyTorch, Scikit-learn, Keras.
+- Azure AI, AWS AI Services, Google Vertex AI.
+
+2.2 Machine Learning
+
+Caracteristicas:
+- Es una rama de la inteligencia artificial enfocada en que los sistemas aprendan patrones a partir de datos.
+- Utiliza modelos supervisados, no supervisados y de refuerzo.
+- Permite crear predicciones o clasificaciones sin programar reglas manuales para cada caso.
+
+Beneficios:
+- Predice eventos futuros como abandono de clientes, demanda o riesgo de credito.
+- Clasifica informacion de forma automatica.
+- Descubre relaciones complejas en los datos.
+- Mejora con nuevos datos si existe retroalimentacion controlada.
+
+Restricciones y retos:
+- Requiere separacion adecuada de datos de entrenamiento y prueba.
+- Puede sobreajustarse si aprende detalles especificos del dataset y no generaliza.
+- Necesita variables relevantes y limpias.
+- La interpretacion de modelos complejos puede ser limitada.
+
+Casos de aplicacion:
+- Prediccion de churn o abandono de clientes.
+- Clasificacion de correos como spam o no spam.
+- Prediccion de ventas.
+- Segmentacion predictiva de clientes.
+- Mantenimiento predictivo.
+
+Lenguajes y herramientas:
+- Python, R, SQL.
+- Scikit-learn, XGBoost, LightGBM, Pandas, NumPy.
+- Jupyter Notebook, MLflow, Databricks.
+
+2.3 Data Mining
+
+Caracteristicas:
+- Se enfoca en descubrir patrones, relaciones, tendencias o conocimiento util dentro de grandes conjuntos de datos.
+- Utiliza tecnicas de clasificacion, clustering, reglas de asociacion, deteccion de anomalias y analisis descriptivo.
+- Se apoya en estadistica, bases de datos y machine learning.
+
+Beneficios:
+- Permite encontrar comportamientos ocultos en datos historicos.
+- Apoya decisiones comerciales y operativas.
+- Ayuda a detectar patrones de compra, grupos de clientes y riesgos.
+- Convierte datos almacenados en conocimiento accionable.
+
+Restricciones y retos:
+- Los resultados dependen de la calidad y representatividad de los datos.
+- Puede encontrar correlaciones que no necesariamente implican causalidad.
+- Requiere interpretacion de negocio para que los patrones sean utiles.
+- Es necesario proteger la privacidad de los datos.
+
+Casos de aplicacion:
+- Analisis de canasta de mercado.
+- Segmentacion de clientes.
+- Identificacion de productos frecuentemente comprados juntos.
+- Deteccion de transacciones atipicas.
+- Analisis de comportamiento de usuarios.
+
+Lenguajes y herramientas:
+- SQL, Python, R.
+- Pandas, Scikit-learn, Orange, RapidMiner, Weka.
+- PostgreSQL, MySQL, Power BI, Tableau.
+
+2.4 Big Data
+
+Caracteristicas:
+- Se refiere al procesamiento de datos de alto volumen, velocidad y variedad.
+- Trabaja con datos estructurados, semiestructurados y no estructurados.
+- Requiere arquitecturas distribuidas para almacenar y procesar informacion masiva.
+
+Beneficios:
+- Permite analizar grandes cantidades de informacion que no caben en sistemas tradicionales.
+- Facilita analisis casi en tiempo real.
+- Integra datos de multiples fuentes como ventas, sensores, redes sociales y logs.
+- Sirve como base para modelos de IA y machine learning a gran escala.
+
+Restricciones y retos:
+- Requiere infraestructura especializada.
+- Aumenta la complejidad de seguridad, privacidad y gobierno de datos.
+- Puede generar altos costos si no se administra adecuadamente.
+- La calidad de datos sigue siendo un problema critico aunque exista gran volumen.
+
+Casos de aplicacion:
+- Analisis de logs de aplicaciones.
+- Monitoreo de sensores IoT.
+- Analitica de redes sociales.
+- Procesamiento de transacciones masivas.
+- Sistemas de recomendacion a gran escala.
+
+Lenguajes y herramientas:
+- Python, Scala, Java, SQL.
+- Apache Spark, Hadoop, Kafka, Hive.
+- Databricks, Snowflake, BigQuery, AWS Glue, Azure Synapse.
+
+2.5 Comparacion general
+
+Inteligencia artificial es el campo mas amplio, orientado a crear sistemas inteligentes. Machine learning es una tecnica dentro de IA que aprende de datos. Data mining se enfoca en descubrir patrones y conocimiento dentro de datos historicos. Big data se centra en almacenar, procesar y analizar datos masivos mediante infraestructura distribuida.
+
+En una solucion empresarial real, las cuatro areas pueden integrarse. Big data almacena y procesa grandes volumenes, data mining permite descubrir patrones, machine learning genera modelos predictivos y la inteligencia artificial aplica esos modelos para automatizar decisiones.
+
+3. CASO DE ESTUDIO 1: ELECTRO-HOGAR S.A.
+
+3.1 Contexto del caso
+
+Electro-Hogar S.A. es una cadena minorista nacional dedicada a la venta de electronica y electrodomesticos. La empresa ha detectado una disminucion constante en la retencion de clientes durante los ultimos dos anos. Aunque la adquisicion de clientes nuevos continua, una parte importante no realiza una segunda compra o abandona la marca despues de un periodo corto.
+
+3.2 Objetivo del caso
+
+Objetivo general:
+Analizar el comportamiento historico de los clientes de Electro-Hogar S.A. para identificar factores asociados al abandono, mejorar la retencion y aumentar el valor de vida del cliente.
+
+Objetivos especificos:
+- Identificar patrones de clientes que no realizan una segunda compra.
+- Segmentar clientes de acuerdo con frecuencia, recencia y monto de compra.
+- Detectar variables asociadas al abandono o baja lealtad.
+- Proponer acciones de retencion basadas en datos.
+- Preparar datos para un posible modelo predictivo de churn.
+
+3.3 Alcance
+
+El analisis contempla informacion historica de clientes, compras, productos, canales de venta, ubicacion, promociones y servicio postventa. El alcance inicial es descriptivo y diagnostico, con preparacion para una fase posterior predictiva.
+
+Queda fuera del alcance inicial la implementacion productiva de un modelo en sistemas transaccionales, ya que primero se requiere validar la calidad de datos, construir indicadores y evaluar patrones.
+
+3.4 Justificacion de la metodologia
+
+La metodologia recomendada es CRISP-DM, porque permite organizar proyectos de analisis de datos en etapas claras: entendimiento del negocio, entendimiento de datos, preparacion, modelado, evaluacion y despliegue. Esta metodologia es adecuada porque el problema no es solo tecnico; requiere conectar datos con una necesidad de negocio: retener clientes.
+
+Tambien se justifica el uso de analisis RFM porque Electro-Hogar necesita entender recencia, frecuencia y valor monetario. Estos indicadores permiten clasificar clientes activos, clientes en riesgo, clientes de alto valor y clientes perdidos.
+
+3.5 Planeacion de etapas para el analisis de datos
+
+Etapa 1: Entendimiento del negocio
+- Definir que se considera abandono.
+- Establecer periodo de observacion, por ejemplo clientes sin recompra en 6 o 12 meses.
+- Identificar indicadores clave: tasa de recompra, frecuencia, ticket promedio, valor de vida y churn.
+
+Etapa 2: Entendimiento de los datos
+- Revisar fuentes disponibles: ventas, clientes, productos, promociones, garantias y reclamos.
+- Diagnosticar valores faltantes, duplicados, formatos inconsistentes y datos historicos incompletos.
+- Identificar variables relevantes para retencion.
+
+Etapa 3: Preparacion de datos
+- Integrar datos de ventas y clientes.
+- Homologar nombres de productos, categorias, tiendas y canales.
+- Crear variables como dias desde ultima compra, total gastado, numero de compras y uso de promociones.
+
+Etapa 4: Analisis exploratorio
+- Analizar comportamiento de clientes retenidos y no retenidos.
+- Comparar clientes de primera compra contra clientes recurrentes.
+- Visualizar patrones por categoria, region, canal y periodo.
+
+Etapa 5: Segmentacion y mineria de datos
+- Aplicar RFM para clasificar clientes.
+- Usar clustering para detectar grupos de comportamiento.
+- Preparar una variable objetivo de churn para una fase predictiva.
+
+Etapa 6: Modelado predictivo posterior
+- Entrenar modelos de clasificacion para predecir abandono.
+- Separar datos en train/test de forma balanceada.
+- Evaluar precision, recall, F1-score y matriz de confusion.
+
+Etapa 7: Recomendaciones de negocio
+- Disenar campanas personalizadas para clientes en riesgo.
+- Ofrecer promociones para segunda compra.
+- Crear programas de fidelizacion por categoria.
+- Medir impacto con indicadores antes y despues.
+
+4. CASO DE ESTUDIO 2: APLICACION A LA PRACTICA ETL
+
+4.1 Contexto y nota de adaptacion
+
+La practica ETL desarrollada previamente utiliza un dataset transaccional de e-commerce con 541,909 registros y 8 columnas: InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID y Country. Aunque la instruccion menciona contrataciones reales, el dataset disponible en esta practica corresponde a ventas de comercio electronico. Por ello, el diseno se adapta al contexto transaccional de ventas, manteniendo los mismos principios de diagnostico, limpieza, diseno dimensional y preparacion para mineria de datos.
+
+4.2 Fase documental y diagnostico inicial
+
+El diagnostico inicial del archivo crudo mostro lo siguiente:
+
+- Filas crudas: 541,909.
+- Columnas: 8.
+- Clientes faltantes en CustomerID: 135,080.
+- Descripciones faltantes: 1,454.
+- Facturas canceladas detectadas por prefijo C: 9,288.
+- Paises distintos: 38.
+- Registros duplicados exactos: 5,268.
+- Cantidades negativas: 10,624.
+- Precios unitarios menores o iguales a cero: 2,517.
+
+Estos hallazgos indican que los datos no deben pasar directamente a una fase de mineria de datos. Primero se requiere limpieza, homologacion, validacion de formatos y construccion de variables analiticas.
+
+4.3 Justificacion del grano de la tabla de hechos
+
+El grano seleccionado para la tabla de hechos es: una linea de producto dentro de una factura de venta.
+
+Esto significa que cada registro de la tabla de hechos representa la venta de un producto especifico, en una factura especifica, para un cliente y fecha determinados.
+
+Justificacion:
+- Permite analizar ventas por producto, cliente, pais, fecha y factura.
+- Conserva el nivel minimo de detalle disponible en el dataset.
+- Permite agregaciones posteriores por dia, mes, pais, cliente o producto.
+- Facilita calcular indicadores como importe por linea, cantidad vendida, ticket, devoluciones y ventas por categoria.
+- Evita perder informacion que seria necesaria para analisis de canasta de mercado o modelos predictivos.
+
+Si el grano se definiera a nivel de factura, se perderia el detalle de productos comprados. Si se definiera a nivel de cliente, se perderia informacion temporal y transaccional. Por ello, el nivel de linea de factura es el mas adecuado.
+
+4.4 Esquema propuesto de data warehouse
+
+Tabla de hechos: fact_venta_linea
+
+Campos principales:
+- id_fecha
+- id_cliente
+- id_producto
+- id_pais
+- invoice_no
+- quantity
+- unit_price
+- importe_linea
+- es_cancelacion
+- alto_valor_transaccion
+
+Dimension: dim_fecha
+
+Campos:
+- id_fecha
+- fecha
+- dia
+- mes
+- anio
+- trimestre
+- dia_semana
+
+Dimension: dim_cliente
+
+Campos:
+- id_cliente
+- customer_id_original
+- segmento_cliente
+- cliente_identificado
+
+Dimension: dim_producto
+
+Campos:
+- id_producto
+- stock_code
+- descripcion_limpia
+- categoria_estimada
+
+Dimension: dim_pais
+
+Campos:
+- id_pais
+- pais_limpio
+- region
+
+Dimension: dim_factura
+
+Campos:
+- invoice_no
+- tipo_factura
+- es_cancelacion
+
+Este esquema permite consultas analiticas como ventas por pais, ventas por mes, productos con mayor ingreso, clientes de mayor valor, comportamiento de compras y deteccion de transacciones atipicas.
+
+4.5 Tecnicas de limpieza de datos
+
+Las tecnicas de limpieza aplicadas o propuestas son:
+
+- Estandarizacion de texto en mayusculas.
+- Eliminacion de caracteres corruptos o especiales.
+- Normalizacion de espacios multiples.
+- Reemplazo de descripciones nulas por SIN_DESCRIPTION.
+- Validacion de facturas con expresion regular.
+- Conversion de fechas con control de errores.
+- Conversion numerica de Quantity y UnitPrice.
+- Calculo de importe_linea como Quantity * UnitPrice.
+- Filtrado de ventas positivas para la fase de mineria.
+- Identificacion de cancelaciones por prefijo C en InvoiceNo.
+
+4.6 Diseno de expresiones regulares
+
+Para limpiar descripciones de productos:
+
+Patron:
+[^A-Z0-9\s\-]
+
+Uso:
+Elimina caracteres que no sean letras, numeros, espacios o guiones. Sirve para quitar simbolos, puntos, caracteres corruptos y signos innecesarios.
+
+Para normalizar espacios:
+
+Patron:
+\s+
+
+Uso:
+Sustituye multiples espacios por un solo espacio.
+
+Para validar numero de factura:
+
+Patron:
+^C?\d{6}$
+
+Uso:
+Acepta facturas de seis digitos y cancelaciones que empiezan con C.
+
+Para nombres de proveedores o dependencias en un dataset de contrataciones, se proponen estas reglas equivalentes:
+
+Patron para variantes corporativas:
+\b(SA DE CV|S\.A\. DE C\.V\.|SAPI DE CV|S\. DE R\.L\.|SRL|SC|AC)\b
+
+Uso:
+Elimina sufijos legales para homologar nombres de proveedores.
+
+Patron para caracteres no alfabeticos en nombres institucionales:
+[^A-Z0-9\s&]
+
+Uso:
+Conserva letras, numeros, espacios y &, eliminando simbolos corruptos.
+
+Patron para espacios multiples:
+\s+
+
+Uso:
+Homologa separacion entre palabras en proveedores, dependencias o descripciones.
+
+4.7 Variable objetivo logica
+
+Se creo la variable binaria alto_valor_transaccion.
+
+Definicion:
+- 1: la transaccion tiene importe_linea igual o mayor a la mediana de importes positivos.
+- 0: la transaccion tiene importe_linea menor a la mediana de importes positivos.
+
+Justificacion:
+Esta variable permite preparar un problema de clasificacion para una fase de mineria de datos o machine learning. El objetivo seria predecir si una linea de venta corresponde a una transaccion de alto valor considerando variables como producto, cantidad, precio, pais, mes y dia de semana.
+
+4.8 Particionamiento Train/Test
+
+Se genero un subconjunto analitico balanceado para la siguiente fase de mineria de datos. Debido al limite de entrega de la plataforma, se exporto una muestra balanceada y no el dataset completo.
+
+Archivos generados:
+- train_ecommerce_balanced.csv
+- test_ecommerce_balanced.csv
+
+Resultado del particionamiento:
+- Train: 16,000 registros.
+- Test: 4,000 registros.
+- Train clase 0: 8,000 registros.
+- Train clase 1: 8,000 registros.
+- Test clase 0: 2,000 registros.
+- Test clase 1: 2,000 registros.
+
+Esto demuestra que la particion es balanceada, ya que ambas clases tienen la misma proporcion en entrenamiento y prueba.
+
+5. CONCLUSION
+
+La inteligencia artificial, machine learning, data mining y big data son areas complementarias dentro del analisis moderno de datos. En el caso de Electro-Hogar S.A., estas tecnicas pueden ayudar a entender y reducir el abandono de clientes. En la practica ETL, el flujo construido con Airflow y PostgreSQL permitio transformar un archivo transaccional crudo en una base preparada para analisis.
+
+El diagnostico mostro problemas reales de calidad, como clientes faltantes, facturas canceladas, duplicados y valores negativos. Por ello, se propuso un esquema dimensional con tabla de hechos a nivel de linea de factura y dimensiones de fecha, cliente, producto, pais y factura. Finalmente, se creo una variable objetivo binaria y se exportaron archivos train/test balanceados para continuar con una fase de mineria de datos.

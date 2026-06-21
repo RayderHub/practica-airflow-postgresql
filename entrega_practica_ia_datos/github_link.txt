@@ -1,0 +1,5 @@
+Repositorio GitHub de apoyo:
+https://github.com/RayderHub/practica-airflow-postgresql
+
+Nota:
+En el repositorio se encuentran los archivos de la practica ETL anterior y los archivos generados para esta nueva entrega.
